@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.mygame.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_game"
+        android:name="com.example.mygame.Fragment1"
+        android:label="@string/menu_Game"
+        tools:layout="@layout/fragment_1">
+        <action
+            android:id="@+id/action_to_fragment_high_score"
+            app:destination="@id/nav_highscore" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_highscore"
+        android:name="com.example.mygame.HighScoreFragment"
+        tools:layout="@layout/fragment_high_score">
+        <action
+            android:id="@+id/action_to_playagain"
+            app:destination="@id/nav_game" />
+        <action
+            android:id="@+id/action_to_home"
+            app:destination="@id/nav_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_qrscan"
+        android:name="com.example.mygame.QRScanFragment"
+        android:label="@string/menu_QR"
+        tools:layout="@layout/fragment_q_r_scan" />
+</navigation>

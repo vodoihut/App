@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".QRScanFragment">
+    <com.budiyev.android.codescanner.CodeScannerView
+        android:id="@+id/qrscan"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        app:autoFocusButtonVisible="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_QR_Result"
+        android:textAlignment="center"
+        android:textSize="20sp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/qr_output"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_Result_values"
+        android:textAlignment="center"
+        android:textIsSelectable="true"
+        android:textSize="20sp"/>
+</LinearLayout>
